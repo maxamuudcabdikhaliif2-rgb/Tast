@@ -1,0 +1,137 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 30px 0;
+    background: rgb(122, 63, 99);
+}
+
+.container {
+    width: 100%;
+    max-width: 1400px;
+    padding: 0 20px;
+}
+
+.slider-wrapper {
+    position: relative;
+    overflow: hidden;
+    padding: 20px 10px 60px;
+}
+
+.card-list .card-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 35px 25px;
+    color: #fff;
+    text-align: center;
+    -webkit-user-select: none;
+    user-select: none;
+    border-radius: 16px;
+    background: rgba(141, 133, 133, 0.986);
+    border: 1px solid rgba(146, 131, 131, 0.959);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    min-height: 370px;
+}
+
+.card-item .user-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 25px;
+    border: 3px solid #fff;
+    padding: 4px;
+}
+
+.card-item .user-name {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.card-item .user-profession {
+    font-size: 1rem;
+    color: #f5eaf0;
+    font-weight: 500;
+    margin: 14px 0 25px;
+}
+
+.card-item .message-button {
+    font-size: 1rem;
+    padding: 11px 30px;
+    color: #fff;
+    background: #3208;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.card-item .message-button:hover {
+    background: #c01515;
+    border-color: #fff;
+    color: #fff;
+}
+
+.slider-wrapper .swiper-pagination {
+    bottom: 10px;
+}
+
+.slider-wrapper .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    opacity: 0.6;
+}
+
+.slider-wrapper .swiper-pagination-bullet-active {
+    opacity: 1;
+}
+
+.slider-wrapper .swiper-button-prev,
+.slider-wrapper .swiper-button-next {
+    color: #fff;
+    transition: 0.2s ease;
+}
+
+.slider-wrapper .swiper-button-prev:hover,
+.slider-wrapper .swiper-button-next:hover {
+    color: #3208eb;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 10px;
+    }
+
+    .slider-wrapper {
+        padding: 15px 5px 55px;
+    }
+
+    .slider-wrapper .swiper-button-prev,
+    .slider-wrapper .swiper-button-next {
+        display: flex;
+        color: #fff;
+        width: 35px;
+        height: 35px;
+    }
+
+    .slider-wrapper .swiper-button-prev::after,
+    .slider-wrapper .swiper-button-next::after {
+        font-size: 22px;
+        font-weight: bold;
+    }
+}

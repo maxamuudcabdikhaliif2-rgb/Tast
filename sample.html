@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: blueviolet;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div id="bilow" style="display: block;">
+        <label for="evc">number</label>
+        <input type="text" id="evc">
+    </div>
+    <div id="pinka" style="display: none;">
+        <label for="evc">Pinka</label>
+        <input type="text" id="pinValue">
+    </div>
+    <div id="options" style="display: none;">
+        <p>evc xogtiis</p>
+    </div>
+    <div id="pinkhalad" style="display: none;">
+        pinka aad soo galisay waa khalad
+    </div>
+    <button type="button" onclick="check()">check</button>
+</body>
+<script>
+    const bilow = document.getElementById('bilow')
+    const input = document.getElementById('evc')
+    const pinDiv = document.getElementById('pinka')
+    function check() {
+        if (input.value == '*770#') {
+            bilow.style.display = 'none'
+            pinDiv.style.display = 'block'
+            const pinValue = document.getElementById('pinValue')
+            const options = document.getElementById('options')
+            const pinkhalad = document.getElementById('pinkhalad')
+            if (pinValue.value == '1209') {
+                pinDiv.style.display = 'none'
+                options.style.display = 'block'
+            } else {
+                pinDiv.style.display = 'none'
+                pinkhalad.style.display = 'block'
+            }
+        } else {
+            alert("wax qaldan baad soo galisay")
+            input.value = ''
+        }
+    }
+</script>
+
+</html>
